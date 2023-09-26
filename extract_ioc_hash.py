@@ -31,8 +31,6 @@ def hashes(url):
     md5hash = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{32}(?![a-z0-9])', r.text)
     sha1hash = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{40}(?![a-z0-9])', r.text)
     sha256hash = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{64}(?![a-z0-9])', r.text)
-    
-    #print("len = {}".format(len(md5hash)))
 
     print("MD5Hash = {}\n".format(json.dumps(md5hash)))
     print("SHA1Hash = {}\n".format(json.dumps(sha1hash)))
